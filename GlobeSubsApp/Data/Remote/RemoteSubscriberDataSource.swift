@@ -10,7 +10,7 @@ import Alamofire
 
 
 // Remote data source where the data is pulling from API https://api.mockaroo.com
-final class RemoteSubscriberDataSource {
+class RemoteSubscriberDataSource {
     func fetchSubscribers() async throws -> [Subscriber] {
         let url = "https://my.api.mockaroo.com/globeapi.json?key=ff232470"
         let data = try await AF.request(url).serializingData().value

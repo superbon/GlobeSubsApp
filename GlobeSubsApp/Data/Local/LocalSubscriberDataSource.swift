@@ -14,7 +14,7 @@ import SwiftData
 
 // where the save, load and clear is happening in local
 @MainActor
-final class LocalSubscriberDataSource {
+class LocalSubscriberDataSource {
     private let context: ModelContext
 
     init(context: ModelContext) {

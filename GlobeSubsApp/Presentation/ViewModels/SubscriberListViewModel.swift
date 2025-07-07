@@ -12,9 +12,9 @@ import SVProgressHUD
 @MainActor
 final class SubscriberListViewModel: ObservableObject {
     @Published var subscribers: [Subscriber] = []
-    private let repository: DefaultSubscriberRepository
+    private let repository: SubscriberRepository
     
-    init(repository: DefaultSubscriberRepository) {
+    init(repository: SubscriberRepository) {
         self.repository = repository
     }
     
