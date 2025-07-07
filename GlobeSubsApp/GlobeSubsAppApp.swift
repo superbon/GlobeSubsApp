@@ -6,27 +6,23 @@
 //
 
 import SwiftUI
+#if canImport(SwiftData)
 import SwiftData
+#else
+import CoreData
+#endif
 
 @main
 struct GlobeSubsAppApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
+#if canImport(SwiftData)
+        .modelContainer(for: SubscriberEntity.self)
+#else
+        .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+#endif
     }
 }

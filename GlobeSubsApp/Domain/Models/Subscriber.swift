@@ -14,6 +14,8 @@ struct Subscriber: Identifiable, Codable, Equatable {
     let id: Int
     let firstName: String
     let lastName: String
+    let gender: String
+    let email: String
     let address: String
     let phoneNumber: String
     let isPostpaid: Bool

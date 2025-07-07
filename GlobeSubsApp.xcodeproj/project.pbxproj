@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E54518C2E1C32DD0004DE4D /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8E54518B2E1C32DD0004DE4D /* SVProgressHUD */; };
 		8EAD26112E184EA20075BB74 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8EAD26102E184EA20075BB74 /* Kingfisher */; };
 		8EAD26192E1851AF0075BB74 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8EAD26182E1851AF0075BB74 /* Alamofire */; };
 /* End PBXBuildFile section */
@@ -34,9 +35,22 @@
 		8EAD25FC2E1845210075BB74 /* GlobeSubsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlobeSubsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8E5451892E1C27970004DE4D /* Exceptions for "GlobeSubsApp" folder in "GlobeSubsApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8EAD25E12E18451C0075BB74 /* GlobeSubsApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8EAD25E42E18451C0075BB74 /* GlobeSubsApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8E5451892E1C27970004DE4D /* Exceptions for "GlobeSubsApp" folder in "GlobeSubsApp" target */,
+			);
 			path = GlobeSubsApp;
 			sourceTree = "<group>";
 		};
@@ -57,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E54518C2E1C32DD0004DE4D /* SVProgressHUD in Frameworks */,
 				8EAD26112E184EA20075BB74 /* Kingfisher in Frameworks */,
 				8EAD26192E1851AF0075BB74 /* Alamofire in Frameworks */,
 			);
@@ -121,6 +136,7 @@
 			packageProductDependencies = (
 				8EAD26102E184EA20075BB74 /* Kingfisher */,
 				8EAD26182E1851AF0075BB74 /* Alamofire */,
+				8E54518B2E1C32DD0004DE4D /* SVProgressHUD */,
 			);
 			productName = GlobeSubsApp;
 			productReference = 8EAD25E22E18451C0075BB74 /* GlobeSubsApp.app */;
@@ -207,6 +223,7 @@
 			packageReferences = (
 				8EAD260F2E184EA20075BB74 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				8EAD26172E1851AF0075BB74 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8E54518A2E1C32DD0004DE4D /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8EAD25E32E18451C0075BB74 /* Products */;
@@ -410,6 +427,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GlobeSubsApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -451,6 +469,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GlobeSubsApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -612,6 +631,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8E54518A2E1C32DD0004DE4D /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
 		8EAD260F2E184EA20075BB74 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -631,6 +658,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8E54518B2E1C32DD0004DE4D /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E54518A2E1C32DD0004DE4D /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
 		8EAD26102E184EA20075BB74 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8EAD260F2E184EA20075BB74 /* XCRemoteSwiftPackageReference "Kingfisher" */;

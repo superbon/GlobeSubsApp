@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+
 // default repo where local and remote call
 final class DefaultSubscriberRepository: SubscriberRepository {
     let remote: RemoteSubscriberDataSource
@@ -23,13 +25,18 @@ final class DefaultSubscriberRepository: SubscriberRepository {
 //    }
 
     func getSubscribers() async throws -> [Subscriber] {
+        
+        
+        
         do {
+            
+            
             let remoteData = try await remote.fetchSubscribers()
-            local.clear()
-            local.save(remoteData)
+            await local.clear()
+            await local.save(remoteData)
             return remoteData
         } catch {
-            return local.load()
+            return await local.load()
         }
     }
 }

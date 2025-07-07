@@ -4,17 +4,26 @@
 //
 //  Created by Bon Ryan on 7/5/25.
 //
-
 import SwiftUI
+#if canImport(SwiftData)
 import SwiftData
+#endif
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+#if canImport(SwiftData)
+    @Environment(\.modelContext) var context
+#endif
+    
     var body: some View {
-        Text("Hello Bon").bold().padding()
-       
+#if canImport(SwiftData)
+        let local = LocalSubscriberDataSource(context: context)
+        let remote = RemoteSubscriberDataSource()
+        let repo = DefaultSubscriberRepository(remote: remote, local: local)
+        let viewModel = SubscriberListViewModel(repository: repo)
+        SubscriberListView(viewModel: viewModel)
+#else
+        Text("SwiftData not supported on this version")
+#endif
     }
 }
 
