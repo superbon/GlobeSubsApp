@@ -6,9 +6,13 @@
 //
 
 import Foundation
+
+
+// check if SwiftData is available. iOS17+
 #if canImport(SwiftData)
 import SwiftData
 
+// Core Model
 @Model
 final class SubscriberEntity {
     @Attribute(.unique) var id: Int
