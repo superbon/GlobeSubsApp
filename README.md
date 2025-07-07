@@ -27,3 +27,28 @@ This project demonstrates:
 | ![](https://drive.google.com/uc?export=view&id=1PtNwbKRmyRgAur7IE75o-1Yjaweha-qY) | ![](https://drive.google.com/uc?export=view&id=1TGeUtNmXctyzsd9N9PCvPhTUmFrqfPEl) |
 
 ---
+
+🧰 Requirements
+iOS 16+
+Xcode 15+
+Swift 5.9+
+
+---
+
+📥 Installation
+Clone the repo
+Open GlobeSubsApp.xcodeproj
+Run on Simulator or Device (iOS 16+)\
+
+-- 
+
+Dependencies are managed using Swift Package Manager:
+Alamofire
+Kingfisher
+
+--
+
+🤝 Acknowledgments
+Globe Telecom 🇵🇭 for inspiring the dataset
+Mockaroo for dummy JSON feeds
+Swift community for tools & libraries used in this project
