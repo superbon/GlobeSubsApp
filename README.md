@@ -37,7 +37,7 @@ Swift 5.9+
 
 📥 Installation
 Clone the repo
-Open GlobeSubsApp.xcodeproj
+Open GlobeSubsApp.xcworkspace
 Run on Simulator or Device (iOS 16+)\
 
 -- 
