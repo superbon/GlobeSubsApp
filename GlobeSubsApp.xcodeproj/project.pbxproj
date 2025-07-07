@@ -68,15 +68,11 @@
 		};
 		8EAD25F52E1845210075BB74 /* GlobeSubsAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = GlobeSubsAppTests;
 			sourceTree = "<group>";
 		};
 		8EAD25FF2E1845210075BB74 /* GlobeSubsAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = GlobeSubsAppUITests;
 			sourceTree = "<group>";
 		};
