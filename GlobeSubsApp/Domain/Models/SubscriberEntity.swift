@@ -14,7 +14,7 @@ import SwiftData
 
 // Core Model
 @Model
-final class SubscriberEntity {
+final class SwiftDataSubscriberEntity {
     @Attribute(.unique) var id: Int
     var firstName: String
     var lastName: String

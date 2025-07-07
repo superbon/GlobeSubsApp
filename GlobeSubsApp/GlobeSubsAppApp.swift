@@ -20,7 +20,7 @@ struct GlobeSubsAppApp: App {
             ContentView()
         }
 #if canImport(SwiftData)
-        .modelContainer(for: SubscriberEntity.self)
+        .modelContainer(for: SwiftDataSubscriberEntity.self)
 #else
         .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
 #endif

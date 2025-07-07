@@ -23,21 +23,21 @@ final class LocalSubscriberDataSource {
 
     func save(_ subscribers: [Subscriber]) {
         for s in subscribers {
-            let entity = SubscriberEntity(id: s.id, firstName: s.firstName, lastName: s.lastName, gender: s.gender, email: s.email, address: s.address, phoneNumber: s.phoneNumber, isPostpaid: s.isPostpaid, photoUrl: s.photoUrl)
+            let entity = SwiftDataSubscriberEntity(id: s.id, firstName: s.firstName, lastName: s.lastName, gender: s.gender, email: s.email, address: s.address, phoneNumber: s.phoneNumber, isPostpaid: s.isPostpaid, photoUrl: s.photoUrl)
             context.insert(entity)
         }
         try? context.save()
     }
 
     func load() -> [Subscriber] {
-        let entities = (try? context.fetch(FetchDescriptor<SubscriberEntity>())) ?? []
+        let entities = (try? context.fetch(FetchDescriptor<SwiftDataSubscriberEntity>())) ?? []
         return entities.map {
             Subscriber(id: $0.id, firstName: $0.firstName, lastName: $0.lastName, gender: $0.gender, email: $0.email, address: $0.address, phoneNumber: $0.phoneNumber, isPostpaid: $0.isPostpaid, photoUrl: $0.photoUrl)
         }
     }
 
     func clear() {
-        let all = try? context.fetch(FetchDescriptor<SubscriberEntity>())
+        let all = try? context.fetch(FetchDescriptor<SwiftDataSubscriberEntity>())
         all?.forEach { context.delete($0) }
         try? context.save()
     }

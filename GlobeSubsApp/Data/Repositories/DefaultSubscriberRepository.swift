@@ -12,31 +12,34 @@ import Foundation
 // default repo where local and remote call
 final class DefaultSubscriberRepository: SubscriberRepository {
     let remote: RemoteSubscriberDataSource
-    let local: LocalSubscriberDataSource
+    let local: Any
 
-    init(remote: RemoteSubscriberDataSource, local: LocalSubscriberDataSource) {
+    init(remote: RemoteSubscriberDataSource, local: Any) {
         self.remote = remote
         self.local = local
     }
     
-//    
-//    init(remote: RemoteSubscriberDataSource) {
+//    init(remote: RemoteSubscriberDataSource, local: Any) {
 //        self.remote = remote
 //    }
 
     func getSubscribers() async throws -> [Subscriber] {
-        
-        
-        
         do {
-            
-            
             let remoteData = try await remote.fetchSubscribers()
-            await local.clear()
-            await local.save(remoteData)
+#if canImport(SwiftData)
+            await (local as? LocalSubscriberDataSource)?.clear()
+            await (local as? LocalSubscriberDataSource)?.save(remoteData)
+#else
+            (local as? CoreDataSubscriberDataSource)?.clear()
+            (local as? CoreDataSubscriberDataSource)?.save(remoteData)
+#endif
             return remoteData
         } catch {
-            return await local.load()
+#if canImport(SwiftData)
+            return await (local as? LocalSubscriberDataSource)?.load() ?? []
+#else
+            return (local as? CoreDataSubscriberDataSource)?.load() ?? []
+#endif
         }
     }
 }

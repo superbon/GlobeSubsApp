@@ -11,19 +11,21 @@ import SwiftData
 
 struct ContentView: View {
 #if canImport(SwiftData)
-    @Environment(\.modelContext) var context
+    @Environment(\.modelContext) var modelContext
+#else
+    @Environment(\.managedObjectContext) var managedContext
 #endif
-    
+
     var body: some View {
 #if canImport(SwiftData)
-        let local = LocalSubscriberDataSource(context: context)
-        let remote = RemoteSubscriberDataSource()
-        let repo = DefaultSubscriberRepository(remote: remote, local: local)
-        let viewModel = SubscriberListViewModel(repository: repo)
-        SubscriberListView(viewModel: viewModel)
+        let local = LocalSubscriberDataSource(context: modelContext)
 #else
-        Text("SwiftData not supported on this version")
+        let local = CoreDataSubscriberDataSource(context: managedContext)
 #endif
+        let remote = RemoteSubscriberDataSource()
+        let repository = DefaultSubscriberRepository(remote: remote, local: local)
+        let viewModel = SubscriberListViewModel(repository: repository)
+        SubscriberListView(viewModel: viewModel)
     }
 }
 
