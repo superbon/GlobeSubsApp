@@ -10,16 +10,16 @@ import Foundation
 // Identifiable for list, Foreach and  onject uniquely
 // Codable for JSON API conversion
 // Equatable Equality checks, testing and object comparison
-struct Subscriber: Identifiable, Codable, Equatable {
-    let id: Int
-    let firstName: String
-    let lastName: String
-    let gender: String
-    let email: String
-    let address: String
-    let phoneNumber: String
-    let isPostpaid: Bool
-    let photoUrl: String
+public struct Subscriber: Identifiable, Codable, Equatable {
+    public let id: Int
+    public let firstName: String
+    public let lastName: String
+    public let gender: String
+    public let email: String
+    public let address: String
+    public let phoneNumber: String
+    public let isPostpaid: Bool
+    public let photoUrl: String
 
     var fullName: String {
         "\(firstName) \(lastName)"
