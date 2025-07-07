@@ -20,3 +20,6 @@ final class SubscriberListViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.subscribers.first?.lastName, "User")
     }
 }
+
+
+

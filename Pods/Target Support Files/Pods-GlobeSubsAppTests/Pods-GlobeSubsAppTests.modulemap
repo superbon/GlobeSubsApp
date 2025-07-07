@@ -1,0 +1,6 @@
+framework module Pods_GlobeSubsAppTests {
+  umbrella header "Pods-GlobeSubsAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
