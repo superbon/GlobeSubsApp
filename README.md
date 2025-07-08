@@ -1,6 +1,6 @@
 # 📱 GlobeSubsApp
 
-A SwiftUI app that displays a list of Globe Telecom subscribers with their photo, name, address, and subscription type (Prepaid or Postpaid).
+A SwiftUI app that showcases a mock list of Globe Telecom subscribers, each with a photo, name, address, and subscription type (Prepaid or Postpaid). The data is entirely fictional and used for demonstration purposes only.
 
 This project demonstrates:
 - Clean architecture with SOLID principles
