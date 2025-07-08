@@ -38,7 +38,7 @@ Swift 5.9+
 📥 Installation
 Clone the repo
 Open GlobeSubsApp.xcworkspace
-Run on Simulator or Device (iOS 16+)\
+Run on Simulator or Device (iOS 16+)
 
 -- 
 
@@ -49,6 +49,6 @@ Kingfisher
 --
 
 🤝 Acknowledgments
-Globe Telecom 🇵🇭 for inspiring the dataset
+Globe Telecom 🇵🇭
 Mockaroo for dummy JSON feeds
 Swift community for tools & libraries used in this project
