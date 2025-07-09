@@ -27,7 +27,7 @@ final class SwiftDataLocalDataSourceTests: XCTestCase {
     func testSaveAndLoad() {
         let dataSource = LocalSubscriberDataSource(context: modelContext)
 
-        let sample = Subscriber(id: 2, firstName: "Local", lastName: "Only", gender: "male", email: "bonryan@gmail.com", address: "Makati", phoneNumber: "09991234567", isPostpaid: false, photoUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d")
+        let sample = Subscriber(id: 2, firstName: "Bon Ryan", lastName: "Beneojan", gender: "male", email: "bonryan@gmail.com", address: "Makati", phoneNumber: "09171234567", isPostpaid: false, photoUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d")
         dataSource.save([sample])
 
         let result = dataSource.load()
