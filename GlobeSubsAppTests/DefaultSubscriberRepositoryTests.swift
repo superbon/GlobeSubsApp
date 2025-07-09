@@ -19,7 +19,7 @@ final class DefaultSubscriberRepositoryTests: XCTestCase {
         ])
         let repo = DefaultSubscriberRepository(remote: remote, local: local)
         let result = try? await repo.getSubscribers()
-        XCTAssertEqual(result?.first?.firstName, "Local")
+        XCTAssertEqual(result?.first?.firstName, "Bon Ryan")
     }
 }
 
