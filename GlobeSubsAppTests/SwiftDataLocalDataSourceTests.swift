@@ -32,7 +32,7 @@ final class SwiftDataLocalDataSourceTests: XCTestCase {
 
         let result = dataSource.load()
         XCTAssertEqual(result.count, 1)
-        XCTAssertEqual(result.first?.firstName, "Juan")
+        XCTAssertEqual(result.first?.firstName, "Bon Ryan")
     }
 }
 #endif

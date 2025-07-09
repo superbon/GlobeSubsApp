@@ -34,7 +34,7 @@ final class CoreDataSubscriberDataSourceTests: XCTestCase {
 
         let result = dataSource.load()
         XCTAssertEqual(result.count, 1)
-        XCTAssertEqual(result.first?.firstName, "Maria")
+        XCTAssertEqual(result.first?.firstName, "Bon Ryan")
     }
 }
 #endif
