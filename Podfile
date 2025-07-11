@@ -4,8 +4,9 @@ platform :ios, '13.0'
 target 'GlobeSubsApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
   # Pods for GlobeSubsApp
+  
+  pod 'RevealingSplashView'
 
   target 'GlobeSubsAppTests' do
     inherit! :search_paths
