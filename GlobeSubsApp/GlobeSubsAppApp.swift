@@ -17,12 +17,25 @@ struct GlobeSubsAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: makeViewModel())
+                            .modelContainer(for: SwiftDataSubscriberEntity.self)
         }
 #if canImport(SwiftData)
         .modelContainer(for: SwiftDataSubscriberEntity.self)
 #else
         .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
 #endif
+    }
+    
+    
+    func makeViewModel() -> SubscriberListViewModel {
+        let container = try! ModelContainer(for: SwiftDataSubscriberEntity.self)
+        let context = ModelContext(container)
+        let local = LocalSubscriberDataSource(context: context)
+
+        let remote = RemoteSubscriberDataSource()
+        let repository = DefaultSubscriberRepository(remote: remote, local: local)
+
+        return SubscriberListViewModel(repository: repository)
     }
 }

@@ -19,7 +19,7 @@ final class SubscriberListViewModel: ObservableObject {
     }
     
     func load() async {
-        SVProgressHUD.show(withStatus: "Loading Subscribers...")
+      //  SVProgressHUD.show(withStatus: "Loading Subscribers...")
         
         do {
             subscribers = try await repository.getSubscribers()

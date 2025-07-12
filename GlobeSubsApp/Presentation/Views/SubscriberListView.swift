@@ -21,6 +21,9 @@ struct SubscriberListView: View {
                 NavigationLink(destination: SubscriberDetailView(subscriber: sub)) {
                     HStack {
                         KFImage(URL(string: sub.photoUrl))
+                            .placeholder {
+                                   ProgressView()
+                            }
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 60, height: 60)

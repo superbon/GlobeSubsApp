@@ -15,6 +15,9 @@ struct SubscriberDetailView: View {
     var body: some View {
         VStack(spacing: 20) {
             KFImage(URL(string: subscriber.photoUrl))
+                .placeholder {
+                       ProgressView()
+                }
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 160, height: 160)
