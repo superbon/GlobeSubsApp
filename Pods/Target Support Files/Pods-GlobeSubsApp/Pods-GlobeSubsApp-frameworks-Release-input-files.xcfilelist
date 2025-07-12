@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-GlobeSubsApp/Pods-GlobeSubsApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/LetterAvatarKit/LetterAvatarKit.framework
 ${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework

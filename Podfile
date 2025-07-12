@@ -7,7 +7,7 @@ target 'GlobeSubsApp' do
   # Pods for GlobeSubsApp
   
   pod 'RevealingSplashView'
-  
+  pod 'LetterAvatarKit'
 
   target 'GlobeSubsAppTests' do
     inherit! :search_paths

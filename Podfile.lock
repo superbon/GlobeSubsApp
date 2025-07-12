@@ -1,16 +1,20 @@
 PODS:
+  - LetterAvatarKit (1.2.5)
   - RevealingSplashView (0.6.0)
 
 DEPENDENCIES:
+  - LetterAvatarKit
   - RevealingSplashView
 
 SPEC REPOS:
   trunk:
+    - LetterAvatarKit
     - RevealingSplashView
 
 SPEC CHECKSUMS:
+  LetterAvatarKit: a1d64fc3699e399890e3c3ed5daa507c83bb3ca2
   RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
 
-PODFILE CHECKSUM: f8f8f39d169f6ff3dd2f2506ab9be3c8a4eab625
+PODFILE CHECKSUM: 4501a0648683b2c395ce552531bd99dd7bdaec8a
 
 COCOAPODS: 1.16.2

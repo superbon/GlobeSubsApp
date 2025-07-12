@@ -8,20 +8,20 @@
 import Foundation
 import SwiftUI
 import Kingfisher
+import LetterAvatarKit
 
 struct SubscriberDetailView: View {
     let subscriber: Subscriber
 
     var body: some View {
         VStack(spacing: 20) {
-            KFImage(URL(string: subscriber.photoUrl))
-                .placeholder {
-                       ProgressView()
-                }
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 160, height: 160)
-                .clipShape(Circle())
+            SubscriberAvatarView(
+                name: subscriber.fullName,
+                photoURL: subscriber.photoUrl,
+                size: 160,
+                borderColor: Color("BorderColor"),
+                borderWidth: 1
+            )
             Text(subscriber.fullName).font(.title).bold()
             Text(subscriber.address)
             Text("Phone: \(subscriber.phoneNumber)")
